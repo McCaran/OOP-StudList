@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="138.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.StudentAddingWindowController">
+   <children>
+      <Label text="Введите данные о студенте:">
+         <VBox.margin>
+            <Insets left="50.0" />
+         </VBox.margin>
+      </Label>
+      <HBox prefHeight="35.0" prefWidth="250.0">
+         <children>
+            <Label text="Имя:">
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="nameField" prefHeight="25.0" prefWidth="131.0">
+               <HBox.margin>
+                  <Insets left="36.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="27.0" prefHeight="30.0" prefWidth="250.0">
+         <children>
+            <Label text="Фамилия:">
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="surnameField" prefHeight="25.0" prefWidth="131.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="27.0" prefHeight="19.0" prefWidth="250.0">
+         <children>
+            <RadioButton fx:id="budget" mnemonicParsing="false" prefHeight="17.0" prefWidth="100.0" selected="true" text="Бюджетник">
+               <HBox.margin>
+                  <Insets left="35.0" />
+               </HBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="group" />
+               </toggleGroup>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="100.0" text="Контрактник" toggleGroup="$group">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets left="-15.0" />
+               </padding>
+            </RadioButton>
+         </children></HBox>
+      <HBox layoutX="10.0" layoutY="95.0" prefHeight="25.0" prefWidth="250.0">
+         <children>
+            <Button fx:id="finishAddingButton" mnemonicParsing="false" onAction="#cancelAdding" text="Отмена">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="30.0" top="5.0" />
+               </HBox.margin></Button>
+            <Button mnemonicParsing="false" onAction="#addStudent" text="Добавить">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="50.0" top="5.0" />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
